@@ -1,40 +1,38 @@
 <template>
-    <header>
-        <h1 v-on:click="changeTitle">{{ title }}</h1>
-    </header>
+  <header>
+    <h1 v-on:click="changeTitle">{{ title }}</h1>
+  </header>
 </template>
 <script>
 // imports
-import { bus } from '../main';
+import { bus } from "../main";
 
 export default {
-    props: {
-      title: {
-        type: String,
-        required: true
-      }
+  props: {
+    title: {
+      type: String,
+      required: true,
     },
-    data(){
-        return{
-
-        }
+  },
+  data() {
+    return {};
+  },
+  methods: {
+    changeTitle: function () {
+      // this.$emit('changeTitle', 'Vue Ninjas');
+      this.title = "Vue Ninjas";
+      bus.$emit("titleChanged", "Vue Ninjas");
     },
-    methods: {
-      changeTitle: function(){
-        // this.$emit('changeTitle', 'Vue Ninjas');
-        this.title = 'Vue Ninjas';
-        bus.$emit('titleChanged', 'Vue Ninjas');
-      }
-    }
-}
+  },
+};
 </script>
 <style scoped>
-header{
-    background: lightgreen;
-    padding: 10px;
+header {
+  background: lightgreen;
+  padding: 10px;
 }
-h1{
-    color: #222;
-    text-align: center;
+h1 {
+  color: #222;
+  text-align: center;
 }
 </style>
