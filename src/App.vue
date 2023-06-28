@@ -1,28 +1,30 @@
 <template>
-    <div>
-        <h1>{{ title }}</h1>
-        <ninjas></ninjas>
-    </div>
+  <div>
+    <h1>{{ title }}</h1>
+    <ninjas></ninjas>
+    {{ someData }}
+  </div>
 </template>
 
 <script>
 // Imports
-import Ninjas from './Ninjas.vue';
+import Ninjas from "./Ninjas.vue";
 
 export default {
-    components: {
-        'ninjas': Ninjas
-    },
-    data () {
-        return {
-          title: 'Ninja App'
-        }
-    }
-}
+  data() {
+    return {
+      title: "Ninja App",
+      someData: ["string", true, false, 2, { name: "Marko" }],
+    };
+  },
+  components: {
+    ninjas: Ninjas,
+  },
+};
 </script>
 
 <style>
-h1{
-    color: purple;
+h1 {
+  color: purple;
 }
 </style>
