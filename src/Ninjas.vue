@@ -1,17 +1,17 @@
 <template>
-    <ul>
-        <li v-for="ninja in ninjas">{{ ninja }}</li>
-    </ul>
+  <ul>
+    <li v-for="(ninja, index) in ninjas" :key="index">{{ ninja }}</li>
+  </ul>
 </template>
 
 <script>
 export default {
-    data () {
-        return {
-          ninjas: ['Yoshi', 'Mario', 'Ryu']
-        }
-    }
-}
+  data() {
+    return {
+      ninjas: ["Yoshi", "Mario", "Ryu"],
+    };
+  },
+};
 </script>
 
 <style>
