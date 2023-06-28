@@ -5,6 +5,7 @@
         <ul>
           <li v-for="ninja in ninjas">{{ ninja.name }}</li>
         </ul>
+        Metallica
         <app-footer v-bind:title="title"></app-footer>
     </div>
 </template>
