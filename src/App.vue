@@ -3,6 +3,9 @@
     <h1>{{ title }}</h1>
     <ninjas></ninjas>
     {{ someData }}
+
+    <hr>
+    <button @click="add">Click me</button>
   </div>
 </template>
 
@@ -20,6 +23,12 @@ export default {
   components: {
     ninjas: Ninjas,
   },
+  methods: {
+    add: function(){
+      console.log('Metallica');
+    }
+
+  }
 };
 </script>
 
