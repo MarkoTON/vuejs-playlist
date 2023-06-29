@@ -8,6 +8,9 @@ Vue.use(VueResource);
 // Custom directives
 Vue.directive('rainbow', {
     bind(el, binding, vnode){
+        // console.log(Math.random());
+        // console.log(Math.random().toString(16));
+        // console.log(Math.random().toString(16).slice(2, 8));
         el.style.color = "#" + Math.random().toString(16).slice(2, 8);
     }
 });
@@ -21,7 +24,7 @@ Vue.directive('theme', {
         }
         if(binding.arg == 'column'){
             el.style.background = '#ddd';
-            el.style.padding = '20px';
+            el.style.padding = '50px';
         }
     }
 });
