@@ -20,6 +20,7 @@ export default {
     this.$http
       .get("http://jsonplaceholder.typicode.com/posts")
       .then(function (data) {
+        console.table(data.body)
         this.blogs = data.body.slice(0, 10);
       });
   },
